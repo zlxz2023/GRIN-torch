@@ -8,3 +8,17 @@
 ✅ Torch-only forward 完成
 mean: -0.034500911831855774
 std : 0.552209198474884
+
+(grin) root@autodl-container-267842a49f-eccde3d4:~/autodl-tmp/GRIN-PL-无注意力# python check.py
+/root/miniconda3/envs/grin/lib/python3.8/site-packages/pytorch_lightning/core/decorators.py:65: LightningDeprecationWarning: The `@auto_move_data` decorator is deprecated in v1.3 and will be removed in v1.5. Please use `trainer.predict` instead for inference. The decorator was applied to `forward`
+  rank_zero_deprecation(
+******************************
+数据集划分:
+总站点数: 55
+训练站点 (44): [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 20, 23, 24, 25, 26, 27, 28, 30, 31, 32, 33, 34, 35, 37, 38, 39, 41, 43, 44, 45, 46, 47, 48, 50, 51, 52, 53]
+测试站点 (11): [4, 11, 19, 21, 22, 29, 36, 40, 42, 49, 54]
+******************************
+/root/miniconda3/envs/grin/lib/python3.8/site-packages/deprecate/deprecation.py:115: LightningDeprecationWarning: The `MetricCollection` was deprecated since v1.3.0 in favor of `torchmetrics.collections.MetricCollection`. It will be removed in v1.5.0.
+  stream(template_mgs % msg_args)
+mean: -0.03450091555714607
+std : 0.552209198474884
