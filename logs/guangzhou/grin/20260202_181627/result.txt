@@ -1,0 +1,344 @@
+(grin) root@autodl-container-aa6147b8a1-28f58848:~/autodl-tmp/USAGNN-DA# python ./scripts/run_imputation.py --config config/grin/guangzhou.yaml --use-semantic True
+/root/miniconda3/envs/grin/lib/python3.8/site-packages/pytorch_lightning/core/decorators.py:65: LightningDeprecationWarning: The `@auto_move_data` decorator is deprecated in v1.3 and will be removed in v1.5. Please use `trainer.predict` instead for inference. The decorator was applied to `forward`
+  rank_zero_deprecation(
+Namespace(adj_threshold=0.1, aggregate_by=['mean'], alpha=10.0, batch_size=32, config='config/grin/guangzhou.yaml', consistency_loss=False, d_emb=8, d_ff=64, d_hidden=64, d_train_freq=5, d_u=0, dataset_name='guangzhou', decoder_order=1, delay=0, detrend=False, epochs=100, ff_dropout=0.0, g_train_freq=1, global_att=False, grad_clip_algorithm='norm', grad_clip_val=5.0, hint_rate=0.7, horizon=24, impute_only_holes=True, in_sample=False, kernel_size=2, l2_reg=0.0, layer_norm=False, loss_fn='l1_loss', lr=0.001, merge='mlp', model_name='grin', n_layers=1, patience=20, pred_loss_weight=1.0, samples_per_epoch=None, scale=True, scaled_target=True, scaling_axis='global', scaling_type='std', seed=-1, stride=1, test_len=0.2, use_lr_schedule=True, use_semantic=True, val_len=0.1, warm_up=0, whiten_prob=0.05, window=24, workers=0)
+
+========== Running seed 534895718 ==========
+Global seed set to 534895718
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+2026-02-02 17:58:00.076209: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+
+  | Name          | Type             | Params
+---------------------------------------------------
+0 | loss_fn       | MaskedMetric     | 0     
+1 | train_metrics | MetricCollection | 0     
+2 | val_metrics   | MetricCollection | 0     
+3 | test_metrics  | MetricCollection | 0     
+4 | model         | GRINet           | 220 K 
+---------------------------------------------------
+220 K     Trainable params
+0         Non-trainable params
+220 K     Total params
+0.883     Total estimated model params size (MB)
+Global seed set to 534895718                                                                                                       
+Epoch 26: 100%|█| 17/17 [00:07<00:00,  2.28it/s, loss=0.674, v_num=0, sem_gate=0.217, val_mae=4.980, val_mape=0.597, val_mre=0.410,
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]                                                                                          
+Testing: 100%|███████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  5.80it/s]--------------------------------------------------------------------------------
+DATALOADER:0 TEST RESULTS
+{'test_loss': 2.7580392360687256,
+ 'test_mae': 2.7580137252807617,
+ 'test_mape': 0.22164031863212585,
+ 'test_mre': 0.14978283643722534,
+ 'test_mse': 12.67329216003418}
+--------------------------------------------------------------------------------
+Testing: 100%|███████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  5.69it/s]
+
+========== Running seed 199900595 ==========
+Global seed set to 199900595
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name          | Type             | Params
+---------------------------------------------------
+0 | loss_fn       | MaskedMetric     | 0     
+1 | train_metrics | MetricCollection | 0     
+2 | val_metrics   | MetricCollection | 0     
+3 | test_metrics  | MetricCollection | 0     
+4 | model         | GRINet           | 220 K 
+---------------------------------------------------
+220 K     Trainable params
+0         Non-trainable params
+220 K     Total params
+0.883     Total estimated model params size (MB)
+Global seed set to 199900595                                                                                                       
+Epoch 22: 100%|█| 17/17 [00:08<00:00,  2.24it/s, loss=0.681, v_num=0, sem_gate=0.225, val_mae=4.500, val_mape=0.541, val_mre=0.371,
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]                                                                                          
+Testing: 100%|███████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  5.42it/s]--------------------------------------------------------------------------------
+DATALOADER:0 TEST RESULTS
+{'test_loss': 2.684664726257324,
+ 'test_mae': 2.6845741271972656,
+ 'test_mape': 0.20521003007888794,
+ 'test_mre': 0.14579446613788605,
+ 'test_mse': 12.596074104309082}
+--------------------------------------------------------------------------------
+Testing: 100%|███████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  5.39it/s]
+
+========== Running seed 862061404 ==========
+Global seed set to 862061404
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name          | Type             | Params
+---------------------------------------------------
+0 | loss_fn       | MaskedMetric     | 0     
+1 | train_metrics | MetricCollection | 0     
+2 | val_metrics   | MetricCollection | 0     
+3 | test_metrics  | MetricCollection | 0     
+4 | model         | GRINet           | 220 K 
+---------------------------------------------------
+220 K     Trainable params
+0         Non-trainable params
+220 K     Total params
+0.883     Total estimated model params size (MB)
+Global seed set to 862061404                                                                                                       
+Epoch 25: 100%|█| 17/17 [00:07<00:00,  2.26it/s, loss=0.664, v_num=0, sem_gate=0.230, val_mae=4.430, val_mape=0.536, val_mre=0.364,
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]                                                                                          
+Testing: 100%|███████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  5.66it/s]--------------------------------------------------------------------------------
+DATALOADER:0 TEST RESULTS
+{'test_loss': 2.636749029159546,
+ 'test_mae': 2.6367299556732178,
+ 'test_mape': 0.19553565979003906,
+ 'test_mre': 0.14319615066051483,
+ 'test_mse': 12.122888565063477}
+--------------------------------------------------------------------------------
+Testing: 100%|███████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  5.60it/s]
+
+========== Running seed 787846414 ==========
+Global seed set to 787846414
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name          | Type             | Params
+---------------------------------------------------
+0 | loss_fn       | MaskedMetric     | 0     
+1 | train_metrics | MetricCollection | 0     
+2 | val_metrics   | MetricCollection | 0     
+3 | test_metrics  | MetricCollection | 0     
+4 | model         | GRINet           | 220 K 
+---------------------------------------------------
+220 K     Trainable params
+0         Non-trainable params
+220 K     Total params
+0.883     Total estimated model params size (MB)
+Global seed set to 787846414                                                                                                       
+Epoch 25: 100%|█| 17/17 [00:08<00:00,  2.20it/s, loss=0.676, v_num=0, sem_gate=0.218, val_mae=4.590, val_mape=0.554, val_mre=0.377,
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]                                                                                          
+Testing: 100%|███████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  5.47it/s]--------------------------------------------------------------------------------
+DATALOADER:0 TEST RESULTS
+{'test_loss': 2.6596508026123047,
+ 'test_mae': 2.6596570014953613,
+ 'test_mape': 0.21290317177772522,
+ 'test_mre': 0.14444126188755035,
+ 'test_mse': 12.016736030578613}
+--------------------------------------------------------------------------------
+Testing: 100%|███████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  5.40it/s]
+
+========== Running seed 996406378 ==========
+Global seed set to 996406378
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name          | Type             | Params
+---------------------------------------------------
+0 | loss_fn       | MaskedMetric     | 0     
+1 | train_metrics | MetricCollection | 0     
+2 | val_metrics   | MetricCollection | 0     
+3 | test_metrics  | MetricCollection | 0     
+4 | model         | GRINet           | 220 K 
+---------------------------------------------------
+220 K     Trainable params
+0         Non-trainable params
+220 K     Total params
+0.883     Total estimated model params size (MB)
+Global seed set to 996406378                                                                                                       
+Epoch 23: 100%|█| 17/17 [00:08<00:00,  2.16it/s, loss=0.678, v_num=0, sem_gate=0.227, val_mae=4.800, val_mape=0.580, val_mre=0.395,
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]                                                                                          
+Testing: 100%|███████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  5.38it/s]--------------------------------------------------------------------------------
+DATALOADER:0 TEST RESULTS
+{'test_loss': 2.9474599361419678,
+ 'test_mae': 2.9473631381988525,
+ 'test_mape': 0.2290676236152649,
+ 'test_mre': 0.16006606817245483,
+ 'test_mse': 14.637887001037598}
+--------------------------------------------------------------------------------
+Testing: 100%|███████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  5.34it/s]
+
+========== FINAL RESULTS (mean ± std) ==========
+mae: 2.6971 ± 0.1287
+mse: 12.2171 ± 0.9612
+mre: 0.1454 ± 0.0069
+mape: 0.2019 ± 0.0129
+(grin) root@autodl-container-aa6147b8a1-28f58848:~/autodl-tmp/USAGNN-DA# python ./scripts/run_imputation.py --config config/grin/guangzhou.yaml --use-semantic True
+/root/miniconda3/envs/grin/lib/python3.8/site-packages/pytorch_lightning/core/decorators.py:65: LightningDeprecationWarning: The `@auto_move_data` decorator is deprecated in v1.3 and will be removed in v1.5. Please use `trainer.predict` instead for inference. The decorator was applied to `forward`
+  rank_zero_deprecation(
+Namespace(adj_threshold=0.1, aggregate_by=['mean'], alpha=10.0, batch_size=32, config='config/grin/guangzhou.yaml', consistency_loss=False, d_emb=8, d_ff=64, d_hidden=64, d_train_freq=5, d_u=0, dataset_name='guangzhou', decoder_order=1, delay=0, detrend=False, epochs=100, ff_dropout=0.0, g_train_freq=1, global_att=False, grad_clip_algorithm='norm', grad_clip_val=5.0, hint_rate=0.7, horizon=24, impute_only_holes=True, in_sample=False, kernel_size=2, l2_reg=0.0, layer_norm=False, loss_fn='l1_loss', lr=0.001, merge='mlp', model_name='grin', n_layers=1, patience=20, pred_loss_weight=0.1, samples_per_epoch=None, scale=True, scaled_target=True, scaling_axis='global', scaling_type='std', seed=-1, stride=1, test_len=0.2, use_lr_schedule=True, use_semantic=True, val_len=0.1, warm_up=0, whiten_prob=0.05, window=24, workers=0)
+
+========== Running seed 534895718 ==========
+Global seed set to 534895718
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+2026-02-02 18:16:32.414617: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+
+  | Name          | Type             | Params
+---------------------------------------------------
+0 | loss_fn       | MaskedMetric     | 0     
+1 | train_metrics | MetricCollection | 0     
+2 | val_metrics   | MetricCollection | 0     
+3 | test_metrics  | MetricCollection | 0     
+4 | model         | GRINet           | 220 K 
+---------------------------------------------------
+220 K     Trainable params
+0         Non-trainable params
+220 K     Total params
+0.883     Total estimated model params size (MB)
+Global seed set to 534895718                                                                                                       
+Epoch 17:  59%|▌| 10/17 [00:05<00:03,  2.09it/s, loss=0.134, v_num=0, sem_gate=0.243, val_mae=5.490, val_mape=0.662, val_mre=0.451,
+                                                                        Epoch 17:  65%|▋| 11/17 [00:05<00:02,  2.07it/s, loss=0                                                                                                                                            Epoch 19:   0%| | 0/17 [00:00<00:00, 4245.25it/s, loss=0.13, v_num=0, sem_gate=0.245, val_mae=6.540, val_mape=0.774, val_mre=0.538,
+Epoch 19:   6%| | 1/17 [00:00<00:04,  3.87it/s, loss=0.128, v_num=0, sem_gate=0.245, val_mae=6.540, val_mape=0.774Epoch 27: 100%|█| 17/17 [00:08<00:00,  2.14it/s, loss=0.119, v_num=0, sem_gate=0.251, val_mae=4.760, val_mape=0.57
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]                                                                         
+Testing: 100%|██████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  5.21it/s]--------------------------------------------------------------------------------
+DATALOADER:0 TEST RESULTS
+{'test_loss': 2.6388354301452637,
+ 'test_mae': 2.6387765407562256,
+ 'test_mape': 0.20085352659225464,
+ 'test_mre': 0.14330728352069855,
+ 'test_mse': 12.243196487426758}
+--------------------------------------------------------------------------------
+Testing: 100%|██████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  5.14it/s]
+
+========== Running seed 199900595 ==========
+Global seed set to 199900595
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name          | Type             | Params
+---------------------------------------------------
+0 | loss_fn       | MaskedMetric     | 0     
+1 | train_metrics | MetricCollection | 0     
+2 | val_metrics   | MetricCollection | 0     
+3 | test_metrics  | MetricCollection | 0     
+4 | model         | GRINet           | 220 K 
+---------------------------------------------------
+220 K     Trainable params
+0         Non-trainable params
+220 K     Total params
+0.883     Total estimated model params size (MB)
+Global seed set to 199900595                                                                                      
+Epoch 27: 100%|█| 17/17 [00:08<00:00,  2.10it/s, loss=0.129, v_num=0, sem_gate=0.244, val_mae=5.600, val_mape=0.65
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]                                                                         
+Testing: 100%|██████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  5.34it/s]--------------------------------------------------------------------------------
+DATALOADER:0 TEST RESULTS
+{'test_loss': 2.8268210887908936,
+ 'test_mae': 2.826719284057617,
+ 'test_mape': 0.18813320994377136,
+ 'test_mre': 0.15351413190364838,
+ 'test_mse': 14.35488224029541}
+--------------------------------------------------------------------------------
+Testing: 100%|██████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  5.29it/s]
+
+========== Running seed 862061404 ==========
+Global seed set to 862061404
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name          | Type             | Params
+---------------------------------------------------
+0 | loss_fn       | MaskedMetric     | 0     
+1 | train_metrics | MetricCollection | 0     
+2 | val_metrics   | MetricCollection | 0     
+3 | test_metrics  | MetricCollection | 0     
+4 | model         | GRINet           | 220 K 
+---------------------------------------------------
+220 K     Trainable params
+0         Non-trainable params
+220 K     Total params
+0.883     Total estimated model params size (MB)
+Global seed set to 862061404                                                                                      
+Epoch 25: 100%|█| 17/17 [00:08<00:00,  2.15it/s, loss=0.118, v_num=0, sem_gate=0.249, val_mae=3.820, val_mape=0.46
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]                                                                         
+Testing: 100%|██████████████████████████████████████████████████████████████████████| 5/5 [00:01<00:00,  4.94it/s]--------------------------------------------------------------------------------
+DATALOADER:0 TEST RESULTS
+{'test_loss': 2.544001340866089,
+ 'test_mae': 2.5438919067382812,
+ 'test_mape': 0.19315481185913086,
+ 'test_mre': 0.1381542682647705,
+ 'test_mse': 11.353666305541992}
+--------------------------------------------------------------------------------
+Testing: 100%|██████████████████████████████████████████████████████████████████████| 5/5 [00:01<00:00,  4.96it/s]
+
+========== Running seed 787846414 ==========
+Global seed set to 787846414
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name          | Type             | Params
+---------------------------------------------------
+0 | loss_fn       | MaskedMetric     | 0     
+1 | train_metrics | MetricCollection | 0     
+2 | val_metrics   | MetricCollection | 0     
+3 | test_metrics  | MetricCollection | 0     
+4 | model         | GRINet           | 220 K 
+---------------------------------------------------
+220 K     Trainable params
+0         Non-trainable params
+220 K     Total params
+0.883     Total estimated model params size (MB)
+Global seed set to 787846414                                                                                      
+Epoch 25: 100%|█| 17/17 [00:08<00:00,  2.18it/s, loss=0.122, v_num=0, sem_gate=0.256, val_mae=3.900, val_mape=0.47
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]                                                                         
+Testing: 100%|██████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  5.45it/s]--------------------------------------------------------------------------------
+DATALOADER:0 TEST RESULTS
+{'test_loss': 2.487658977508545,
+ 'test_mae': 2.4875681400299072,
+ 'test_mape': 0.17238983511924744,
+ 'test_mre': 0.13509541749954224,
+ 'test_mse': 11.479567527770996}
+--------------------------------------------------------------------------------
+Testing: 100%|██████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  5.37it/s]
+
+========== Running seed 996406378 ==========
+Global seed set to 996406378
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name          | Type             | Params
+---------------------------------------------------
+0 | loss_fn       | MaskedMetric     | 0     
+1 | train_metrics | MetricCollection | 0     
+2 | val_metrics   | MetricCollection | 0     
+3 | test_metrics  | MetricCollection | 0     
+4 | model         | GRINet           | 220 K 
+---------------------------------------------------
+220 K     Trainable params
+0         Non-trainable params
+220 K     Total params
+0.883     Total estimated model params size (MB)
+Global seed set to 996406378                                                                                      
+Epoch 26: 100%|█| 17/17 [00:08<00:00,  2.19it/s, loss=0.118, v_num=0, sem_gate=0.254, val_mae=4.830, val_mape=0.58
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]                                                                         
+Testing: 100%|██████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  5.54it/s]--------------------------------------------------------------------------------
+DATALOADER:0 TEST RESULTS
+{'test_loss': 2.678375482559204,
+ 'test_mae': 2.678274154663086,
+ 'test_mape': 0.2051551192998886,
+ 'test_mre': 0.1454523354768753,
+ 'test_mse': 12.325590133666992}
+--------------------------------------------------------------------------------
+Testing: 100%|██████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  5.50it/s]
+
+========== FINAL RESULTS (mean ± std) ==========
+mae: 2.5492 ± 0.1049
+mse: 11.6090 ± 0.7285
+mre: 0.1374 ± 0.0057
+mape: 0.1777 ± 0.0155

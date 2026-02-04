@@ -1,0 +1,40 @@
+(grin) root@autodl-container-267842a49f-eccde3d4:~/autodl-tmp/USAGNN-DA# python ./scripts/run_imputation.py --config config/grin/guangzhou.yaml
+/root/miniconda3/envs/grin/lib/python3.8/site-packages/pytorch_lightning/core/decorators.py:65: LightningDeprecationWarning: The `@auto_move_data` decorator is deprecated in v1.3 and will be removed in v1.5. Please use `trainer.predict` instead for inference. The decorator was applied to `forward`
+  rank_zero_deprecation(
+Namespace(adj_threshold=0.1, aggregate_by=['mean'], alpha=10.0, batch_size=32, config='config/grin/guangzhou.yaml', consistency_loss=False, d_emb=8, d_ff=64, d_hidden=64, d_train_freq=5, d_u=0, dataset_name='guangzhou', decoder_order=1, delay=0, detrend=False, epochs=100, ff_dropout=0.0, g_train_freq=1, global_att=False, grad_clip_algorithm='norm', grad_clip_val=5.0, hint_rate=0.7, horizon=24, impute_only_holes=True, in_sample=False, kernel_size=2, l2_reg=0.0, layer_norm=False, loss_fn='l1_loss', lr=0.001, merge='mlp', model_name='grin', n_layers=1, patience=20, pred_loss_weight=0, samples_per_epoch=None, scale=True, scaled_target=True, scaling_axis='global', scaling_type='std', seed=-1, stride=1, test_len=0.2, use_lr_schedule=True, use_semantic=False, val_len=0.1, warm_up=0, whiten_prob=0.05, window=24, workers=0)
+Global seed set to 35385406
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+2026-01-26 17:09:04.055891: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+
+  | Name          | Type             | Params
+---------------------------------------------------
+0 | loss_fn       | MaskedMetric     | 0     
+1 | train_metrics | MetricCollection | 0     
+2 | val_metrics   | MetricCollection | 0     
+3 | test_metrics  | MetricCollection | 0     
+4 | model         | GRINet           | 193 K 
+---------------------------------------------------
+193 K     Trainable params
+0         Non-trainable params
+193 K     Total params
+0.775     Total estimated model params size (MB)
+Global seed set to 35385406                                                                                                                     
+Epoch 37: 100%|█| 17/17 [00:05<00:00,  3.04it/s, loss=0.156, v_num=0, val_mae=3.940, val_mape=0.483, val_mre=0.324, val_mse=24.20, train_mae=4.0
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]                                                                                                       
+Testing: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  7.11it/s]--------------------------------------------------------------------------------
+DATALOADER:0 TEST RESULTS
+{'test_loss': 2.813861846923828,
+ 'test_mae': 2.813803195953369,
+ 'test_mape': 0.21859531104564667,
+ 'test_mre': 0.1528126746416092,
+ 'test_mse': 13.279278755187988}
+--------------------------------------------------------------------------------
+Testing: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  7.12it/s]
+- AGGREGATE BY MEAN
+ mae: 2.7569
+ mse: 12.8331
+ mre: 0.1486
+ mape: 0.2060
